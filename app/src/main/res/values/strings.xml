@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Ветра Астаны</string>
-
+    <string name="banner1_id">ca-app-pub-5322008989186540/9862104513</string>
+    <string name="banner2_id">ca-app-pub-5322008989186540/3815570915</string>
+    <string name="banner3_id">ca-app-pub-5322008989186540/5292304113</string>
+    <string name="banner4_id">ca-app-pub-5322008989186540/5013102510</string>
 </resources>

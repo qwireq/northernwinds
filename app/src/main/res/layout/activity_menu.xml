@@ -3,89 +3,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
     android:orientation="vertical"
     android:background="@drawable/back"
-    tools:context="com.northernwinds.northernwinds.MenuActivity">
+    tools:context="com.northernwinds.northernwinds.MenuActivity"
+    >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="2"
-        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:alpha="1"
+        android:paddingTop="20dp"
         >
-        <TextView
-            android:layout_marginTop="50dp"
-            android:id="@+id/titleTextView"
-            android:gravity="center"
-            android:text="Ветра"
-            android:textSize="65sp"
-            android:fontFamily="https://fonts.googleapis.com/css?family=Playfair+Display"
-            android:textColor="#221401"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/title2TextView"
-            android:gravity="center"
-            android:text="Астаны"
-            android:textSize="65sp"
-            android:fontFamily="https://fonts.googleapis.com/css?family=Playfair+Display"
-            android:textColor="#221401"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="10"
-        android:gravity="center"
-        >
-        <Button
-            android:id="@+id/toJourneyButton"
-            android:layout_gravity="center"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="20"
+            android:gravity="center"
 
-            android:shadowDy="1"
-            android:shadowDx="1"
-            android:shadowRadius="1"
-            android:shadowColor="#221401"
+            >
+            <TextView
+                android:id="@+id/titleTextView"
+                android:gravity="center"
+                android:text="Ветра"
+                android:textSize="50sp"
+                android:fontFamily="https://fonts.googleapis.com/css?family=Playfair+Display"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/title2TextView"
+                android:gravity="center"
+                android:text="Астаны"
+                android:textSize="50sp"
+                android:fontFamily="https://fonts.googleapis.com/css?family=Playfair+Display"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/menuSubTextView"
+                android:gravity="center"
+                android:text="Отечественная интерактивная новелла в жанре создай свое приключение"
+                android:textSize="25sp"
 
-            android:text="Новая Игра"
-            android:textAllCaps="false"
-            android:background="@android:color/transparent"
-            android:textColor="#221401"
-            android:padding="10dp"
-            android:textSize="25sp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            />
-
-
-        <Button
-            android:id="@+id/feedbackButton"
-            android:layout_gravity="center_vertical"
+                android:fontFamily="https://fonts.googleapis.com/css?family=Playfair+Display"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="25sp"
-
-            android:shadowDy="1"
-            android:shadowDx="1"
-            android:shadowRadius="1"
-            android:shadowColor="#221401"
-
-            android:text="Обратная Связь"
-            android:textAllCaps="false"
+            android:orientation="vertical"
+            android:layout_weight="80"
+            android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="#221401"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            />
+            >
+            <Button
+                android:id="@+id/toJourneyButton"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:shadowDy="1"
+                android:shadowDx="1"
+                android:shadowRadius="1"
+                android:shadowColor="#221401"
+                android:alpha="1"
+                android:text="Новая Игра"
+                android:textAllCaps="false"
+                android:background="@drawable/bttn"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                />
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+
+                android:shadowDy="1"
+                android:shadowDx="1"
+                android:shadowRadius="1"
+                android:shadowColor="#221401"
+
+                android:text="Продолжить"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent"
+
+                android:textColor="#ffffffff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                />
+
+            <Button
+                android:id="@+id/feedbackButton"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:textSize="20sp"
+
+                android:shadowDy="1"
+                android:shadowDx="1"
+                android:shadowRadius="1"
+                android:shadowColor="#221401"
+
+                android:text="Обратная Связь"
+                android:textAllCaps="false"
+
+                android:background="@android:color/transparent"
+                android:textColor="#ffffffff"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                />
+
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

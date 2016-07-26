@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "671506491569",
+    "firebase_url": "https://astanawinds-321e1.firebaseio.com",
+    "project_id": "astanawinds-321e1",
+    "storage_bucket": "astanawinds-321e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671506491569:android:917564eb2aff01f5",
+        "android_client_info": {
+          "package_name": "com.northernwinds.northernwinds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671506491569-s98reff2eu9g82ln2c9p4rjt6l934kqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjsLlOW1WeoYlnDIKJP6ra2ISQq6dx5tI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

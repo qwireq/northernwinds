@@ -1,6 +1,7 @@
 package com.northernwinds.northernwinds;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.BackendlessDataQuery;
 
+import java.util.ArrayList;
+
 public class ChoiceActivity extends AppCompatActivity {
     private static final String TAG = "ChoiceBlyat" ;
     private Choice choice;
@@ -26,12 +29,12 @@ public class ChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
 
-
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/PlayfairDisplay-Italic.ttf");
 
 
         firstChoiceButton = (Button) findViewById(R.id.firstChoiceButton);
         secondChoiceButton = (Button) findViewById(R.id.secondChoiceButton);
+
 
         firstChoiceButton.setTypeface(custom_font);
         secondChoiceButton.setTypeface(custom_font);
@@ -41,31 +44,22 @@ public class ChoiceActivity extends AppCompatActivity {
 
         Log.d(TAG,"choiceId: "+choiceId);
 
-        String whereClause = "objectId = "+ "'" + choiceId + "'";
-        BackendlessDataQuery query = new BackendlessDataQuery();
-        query.setWhereClause(whereClause);
-
-        Backendless.Persistence.of(Choice.class).find(query, new AsyncCallback<BackendlessCollection<Choice>>() {
-            @Override
-            public void handleResponse(BackendlessCollection<Choice> response) {
-                choice = response.getData().get(0);
-                Log.d(TAG,"choice nash: "+choice);
+        ArrayList<Choice> choices = (ArrayList<Choice>) DataHolder.getDataHolder().getChoiceList();
+        int n = choices.size();
+        for(int i = 0; i<n; i++){
+            if(choices.get(i).getObjectId().equals(choiceId)){
+                choice = choices.get(i);
                 showChoices();
-
+                break;
             }
-
-            @Override
-            public void handleFault(BackendlessFault fault) {
-                Log.e(TAG,"Nihuya ne poluchilos naiti choice "+fault.getMessage());
-            }
-        });
-
+        }
     }
 
     private void showChoices() {
         firstChoiceButton.setText(choice.getFirst());
         secondChoiceButton.setText(choice.getSecond());
 
+        secondChoiceButton.setBackgroundResource(R.drawable.bttn);
         firstChoiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

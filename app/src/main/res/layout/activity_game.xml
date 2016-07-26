@@ -3,27 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.northernwinds.northernwinds.GameActivity"
     android:orientation="vertical"
-    android:background="@drawable/back"
-    >
+    android:background="@drawable/back">
 
     <LinearLayout
-        android:layout_weight="8"
+        android:layout_weight="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        android:alpha="1"
         android:layout_margin="0dp"
+
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
             <TextView
                 android:id="@+id/subTitleTextView"
-                android:text="Пролог"
+                android:text=""
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
                 android:textSize="30sp"
@@ -43,11 +44,12 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical"
             android:fillViewport="true"
+            android:layout_margin="0dp"
             >
 
             <WebView
                 android:id="@+id/textBlyat"
-                android:textColor="#221401"
+                android:textColor="@android:color/white"
                 android:lineSpacingMultiplier="1.5"
                 android:textSize="20sp"
                 android:padding="10dp"
@@ -60,30 +62,37 @@
         </com.northernwinds.northernwinds.ScrollViewExt>
     </LinearLayout>
     <LinearLayout
-        android:layout_weight="92"
+        android:gravity="center"
+        android:layout_weight="90"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        >
+
         <Button
             android:id="@+id/nextButton"
             android:gravity="center"
             android:text="Вперед"
             android:textAllCaps="false"
             android:textSize="25sp"
-            android:background="@android:color/transparent"
-            android:textColor="#221401"
-            android:textColorHighlight="@android:color/holo_blue_dark"
-            android:paddingBottom="10dp"
 
+            android:background="@drawable/bttn"
+            android:textColor="#ffffffff"
+            android:textColorHighlight="@android:color/black"
+            android:paddingBottom="5dp"
             android:shadowDy="1"
             android:shadowDx="1"
             android:shadowRadius="1"
             android:shadowColor="#221401"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            />
 
-            >
-            </Button>
+
+
+
     </LinearLayout>
 
 </LinearLayout>

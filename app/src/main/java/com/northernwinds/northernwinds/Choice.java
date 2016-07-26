@@ -1,17 +1,23 @@
 package com.northernwinds.northernwinds;
 
+import io.realm.RealmObject;
+
+/*
 import com.backendless.Backendless;
 import com.backendless.util.persistence.AbstractBackendlessDataObject;
+
+import io.realm.RealmObject;
 
 /**
  * Created by Dias on 14.07.2016.
  */
-public class Choice {
+public class Choice extends RealmObject{
     String objectId;
     String first;
     String second;
     String storyFirst;
     String storySecond;
+
     public Choice() {
     }
 
